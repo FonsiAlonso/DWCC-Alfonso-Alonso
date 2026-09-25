@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de nota media</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Calculadora de nota media</h1>
+    </header>
+
+    <main>
+        <section class="tarjeta">
+
+            <h2>Calcula tu nota media</h2>
+
+            <form id="formulario">
+
+                <label for="examen">Nota del examen:</label>
+                <input
+                    type="number"
+                    id="examen"
+                    min="0"
+                    max="10"
+                    step="0.01"
+                    required
+                >
+
+                <label for="practica">Nota de la práctica:</label>
+                <input
+                    type="number"
+                    id="practica"
+                    min="0"
+                    max="10"
+                    step="0.01"
+                    required
+                >
+
+                <p id="mensajeError" class="mensaje-error" aria-live="polite"></p>
+
+                <button type="submit">Calcular</button>
+
+            </form>
+
+            <div id="resultado"></div>
+            <p id="notaMinima" class="nota-minima" aria-live="polite"></p>
+
+            <section class="historial" aria-labelledby="tituloHistorial">
+                <div class="historial-cabecera">
+                    <h3 id="tituloHistorial">Historial</h3>
+                    <button type="button" id="borrarHistorial" class="boton-secundario">
+                        Borrar historial
+                    </button>
+                </div>
+                <ul id="listaHistorial"></ul>
+                <p id="historialVacio" class="historial-vacio">Aún no hay cálculos guardados.</p>
+            </section>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Calculadora de notas</p>
+    </footer>
+
+    <script src="calculadora.js"></script>
+
+</body>
+
+</html>
